@@ -1,0 +1,83 @@
+/* ==========================
+   EXECUTIVE LAYOUT OVERRIDES
+   ========================== */
+
+:root{
+  --content-max: 1120px;
+  --pad: 24px;
+  --radius: 18px;
+}
+
+/* Make content centered + clean */
+main.content{
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--pad);
+}
+
+section{
+  padding: 72px 0 !important;
+}
+
+/* ✅ CRITICAL FIX: Timeline always visible */
+#timeline .timeline-item{
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Show both education + experience always */
+#timeline .section-education,
+#timeline .section-experience{
+  display: block !important;
+}
+
+/* Neutralize Bootstrap d-none ONLY inside timeline */
+#timeline .d-none{
+  display: block !important;
+}
+
+/* Make timeline blocks look like modern cards */
+#timeline .timeline-item{
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 18px 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+body[data-theme="dark"] #timeline .timeline-item{
+  background: rgba(30,41,59,0.65);
+  border-color: rgba(255,255,255,0.10);
+}
+
+/* --------------------------
+   BIG LAYOUT CHANGE:
+   Hide sidebar (top-layout feel)
+   -------------------------- */
+#sidebar, #sidebarToggle{
+  display: none !important;
+}
+
+main.content{
+  margin-left: 0 !important;
+}
+
+/* Hero becomes cleaner */
+#home{
+  min-height: 92vh !important;
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+#home p{
+  max-width: 760px;
+}
+
+/* Reduce excessive scaling */
+.skill-card:hover,
+.testimonial-card:hover,
+.achievement-card:hover,
+.project-card:hover{
+  transform: translateY(-4px) !important;
+}

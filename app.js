@@ -33,7 +33,7 @@ const initTheme = () => {
 const initTyped = () => {
   if (window.Typed) {
     new Typed("#typed", {
-      strings: ["Web Developer", "Data Enthusiast", "Creative Coder", "Event Coordinator"],
+      strings: ["Technical Lead", "Full Stack Developer", "Azure Cloud Architect", "Secure Digital Platform Engineer"],
       typeSpeed: 20,
       backSpeed: 20,
       backDelay: 2000,
